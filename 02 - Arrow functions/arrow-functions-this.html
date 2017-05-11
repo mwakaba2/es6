@@ -62,7 +62,9 @@
 
   <script>
     const box = document.querySelector('.box');
+    // 'this' in this scope will be bound to Window
     box.addEventListener('click', function() {
+      // don't want to use arrow function at the top level if you want to reference to box.
       let first = 'opening';
       let second = 'open';
 
@@ -71,6 +73,7 @@
       }
 
       this.classList.toggle(first);
+      // 'this' inside the arrow function will be the parent scope's this
       setTimeout(() => {
         console.log(this);
         this.classList.toggle(second);
