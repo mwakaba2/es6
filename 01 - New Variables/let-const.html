@@ -6,14 +6,19 @@
 </head>
 <body>
 <script>
+  // you can declare var twice and don't get any errors
+  // you cannot declar let and const twice
+  // const cannot be udpated
   const key = 'abc123';
   let points = 50;
   let winner = false;
 
+  // attributes can change
+  // if you want to freeze the whole object
   const person = {
     name: 'Wes',
     age: 28
-  }
+  };
 
   const wes = Object.freeze(person);
 
