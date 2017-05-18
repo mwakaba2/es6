@@ -30,7 +30,14 @@
   <h2 class="jump">SPREADS!</h2>
 
 <script>
-  
+  // get node and update innerHRML
+  let heading = document.querySelector('.jump');
+  heading.innerHTML = sparanWrap(heading.textContent);
+
+  function sparanWrap(word) {
+    return [...word].map((letter) => `<span>${letter}</span>`).join('');
+  }
+
 </script>
 </body>
 </html>
