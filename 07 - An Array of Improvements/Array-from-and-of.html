@@ -11,16 +11,18 @@
   </div>
 <body>
 <script>
-  // const people = document.querySelectorAll('.people p');
-  // const peopleArray = Array.from(people, person => {
-  //   console.log(person);
-  //   return person.textContent;
-  // });
-  // console.log(peopleArray);
-
-  // // const names = people.map(person => person.textContent);
+  const people = document.querySelectorAll('.people p');
+  const peopleArray = Array.from(people, person => {
+    console.log(person);
+    return person.textContent;
+  });
+  console.log(peopleArray);
+  // console.log(people);
+  // Won't work bevause people is a NodeList
+  // const names = people.map(person => person.textContent);
 
   function sumAll() {
+    //arguments is array ish
     const nums = Array.from(arguments);
     return nums.reduce((prev, next) => prev + next, 0);
   }
