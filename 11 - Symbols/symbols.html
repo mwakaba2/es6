@@ -6,15 +6,18 @@
 </head>
 <body>
 <script>
+  // unique identifiers, no naming collisions, create a property in a unique way
   const wes = Symbol('Wes');
   const person = Symbol('Wes');
 
+  // make sure keys and objects are absolutely unique
   const classRoom = {
     [Symbol('Mark')] : { grade: 50, gender: 'male' },
     [Symbol('olivia')]: { grade: 80, gender: 'female' },
     [Symbol('olivia')]: { grade: 80, gender: 'female' },
   };
 
+  // symbols are not enumerable
   for (const person in classRoom) {
     console.log(person);
   }
