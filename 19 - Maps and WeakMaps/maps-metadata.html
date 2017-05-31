@@ -22,6 +22,7 @@
   const clickCounts = new Map();
   const buttons = document.querySelectorAll('button');
 
+  //maps are great for keeping track of metadata inside the object
   buttons.forEach(button => {
     clickCounts.set(button, 0);
     button.addEventListener('click', function() {
